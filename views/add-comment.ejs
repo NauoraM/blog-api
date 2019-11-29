@@ -1,0 +1,24 @@
+<% include partials/header.ejs %>
+    <div class="container">
+        <% if (message != '') { %>
+            <p class="text-center text-danger"><%= message %></p>
+        <% } %>
+        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+                <div class="form-group col-md-4">
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Comment" required>
+                </div>
+            </div>
+            <div class="form-row">
+                
+                </div>
+                <div class="col-md-12">
+                    <label for="player-img"><b>Profile picture</b></label><br>
+                    <input type="file" name="image" id="player-img" class="" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary float-right">Add Comment</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

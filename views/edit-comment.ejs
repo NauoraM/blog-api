@@ -1,0 +1,25 @@
+<% include partials/header.ejs %>
+<div class="container">
+    <% if (message) { %>
+        <p class="text-center text-danger"><%= message %></p>
+    <% } %>
+
+    <% if (player) { %>
+        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="username">Comment</label>
+                    <input type="text" class="form-control" name="username" id="username" value="<%= player.user_name %>" required disabled title="Comment cannot be edited.">
+                </div>
+            </div>
+            <div class="form-row">
+            </div>
+            <button type="submit" class="btn btn-success float-right">Update Comment</button>
+        </form>
+    <% } else { %>
+        <p class="text-center">Comment Not Found. Go <a href="/add">here</a> to add comments.</p>
+    <% } %>
+</div>
+</div>
+</body>
+</html>
